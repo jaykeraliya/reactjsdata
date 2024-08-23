@@ -1,0 +1,32 @@
+<!-- Quest14.Write a JavaScript program to calculate multiplication and division of two numbers (input
+from the user).  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" placeholder="Enter num1" class="input" />
+    <input type="text" placeholder="Enter num2" class="input1" />
+    <button class="mult">Multiplication</button>
+    <button class="divi">Division</button><br />
+
+    <span class="res2"></span>
+    <script>
+      var in1 = document.querySelector(".input");
+      var in2 = document.querySelector(".input1");
+      var res2 = document.querySelector(".res2");
+
+      document.querySelector(".mult").addEventListener("click", () => {
+        res2.innerHTML = `${in1.value * in2.value}`;
+      });
+
+      document.querySelector(".divi").addEventListener("click", () => {
+        res2.innerHTML = `${in1.value / in2.value}`;
+      });
+    </script>
+  </body>
+</html>

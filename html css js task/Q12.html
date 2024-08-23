@@ -1,0 +1,48 @@
+<!-- Quest12.Write a JavaScript program to display the current day and time in the following format.
+Sample Output : Today is : Tuesday. 
+Current time is : 10 PM : 30 : 38-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<script>
+let days=[
+"sunday",
+"monday",
+"tuesday",
+"wednesday",
+"thursday",
+"friday",
+"saturday"];
+
+
+let date=new Date();
+let day=date.getDay();
+let dayName=days[day];
+
+let hours=date.getHours();
+let minutes=date.getMinutes();
+let seconds=date.getSeconds();
+
+
+let ampm=hours>=12?"AM":"PM";
+
+hours = hours / 12;
+hours = hours ? hours : 12;
+
+console.log(`Today is : ${dayName}`);
+console.log(`Current time is : ${hours} ${ampm} : ${minutes} : ${seconds}`);
+</script>
+</body>
+</html>
+
+
+
+<!-- //output// -->
+<!-- //Today is : friday // -->
+<!-- //Current time is : 1 AM : 15 : 36 // -->

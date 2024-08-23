@@ -1,0 +1,66 @@
+<!-- Quest22.write a code in javascript to apply validations of following form  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container2 {
+        display: flex;
+        justify-content: center;
+      }
+      /* form {
+        display: flex;
+        justify-content: center;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <center><h1>get started</h1></center>
+      <br />
+      <br />
+    </div>
+    <div class="container2">
+      <form name="form1" onsubmit="return validate(this.value)">
+        <input type="text" id="username" placeholder="username" />
+        <br /><br />
+        <input type="text" id="email" placeholder="email" /><br /><br />
+        <input type="text" id="password" placeholder="password" /><br /><br />
+        <input type="submit" value="register" />
+      </form>
+    </div>
+
+    <script>
+      function validate() {
+        var username = document.getElementById("username").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+
+        if (username == "") {
+          alert("username must be filled out");
+          return false;
+        }
+        if (email == "") {
+          alert("please enter your email here");
+          return false;
+        }
+        if (password === "") {
+          alert("please enter your password");
+          return false;
+        } else if (password < 7) {
+          alert("enter valid password here");
+          return false;
+        }
+
+        var em1 =
+          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (!em1.test(document.form1.email.value)) {
+          alert("Please enter your Valid email Address *");
+        }
+        return false;
+      }
+    </script>
+  </body>
+</html>

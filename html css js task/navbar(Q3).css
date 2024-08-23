@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar > li,
+a {
+  list-style-type: none;
+  text-decoration: none;
+}
+ul > li {
+  list-style-type: none;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+ul li {
+  display: block;
+  text-decoration: none;
+}
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: skyblue;
+  margin-top: 20px;
+}
+#sub-menu {
+  top: 0;
+  left: 0;
+  opacity: 1;
+  position: relative;
+  visibility: hidden;
+  z-index: 1;
+}
+li:hover #sub-menu {
+  visibility: visible;
+}
